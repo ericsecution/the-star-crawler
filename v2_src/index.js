@@ -24,15 +24,11 @@ class Particle {
         this.color = color;
     }
 
-    // Updated the method to draw() particles here in the v3
+    // method to draw individual particle
     draw() {
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2, false);
-        // gradient color for the particle (neon pink to neon green)
-        let gradient = ctx.createRadialGradient(this.x, this.y, 0, this.x, this.y, this.size);
-        gradient.addColorStop(0, 'rgba(255, 0, 255, 1)'); // neon pink
-        gradient.addColorStop(1, 'rgba(0, 255, 0, 1)'); // neon green
-        ctx.fillStyle = gradient;
+        ctx.fillStyle = 'rgba(255, 0, 255, 0.8)'; // neon pink color
         ctx.fill();
     }
 
@@ -88,7 +84,7 @@ function init() {
     }
 }
 
-// also updated this function to connectParticles() here in v3
+// check if particles are close enough to draw line between them
 function connectParticles() {
     let opacityValue = 1;
     for (let a = 0; a < particlesArray.length; a++) {
@@ -97,7 +93,7 @@ function connectParticles() {
                          + ((particlesArray[a].y - particlesArray[b].y) * (particlesArray[a].y - particlesArray[b].y));
             if (distance < (canvas.width/7) * (canvas.height/7)) {
                 opacityValue = 1 - (distance/20000);
-                ctx.strokeStyle='rgba(157, 192, 249, ' + opacityValue + ')'; // revert to original blue color for lines
+                ctx.strokeStyle='rgba(0, 255, 0, ' + opacityValue + ')'; // neon green color
                 ctx.lineWidth = 1;
                 ctx.beginPath();
                 ctx.moveTo(particlesArray[a].x, particlesArray[a].y);
