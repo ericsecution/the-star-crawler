@@ -1,0 +1,28 @@
+{
+  "name": "the-star-crawler",
+  "version": "1.0.0",
+  "description": "Going to create a \"star crawler\" creature that follows the cursor around the screen. Looks cool, uses trigonometry, and kinda looks like that iOS Game creature from Alien Invasion.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ericsecution/the-star-crawler.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ericsecution/the-star-crawler/issues"
+  },
+  "homepage": "https://github.com/ericsecution/the-star-crawler#readme",
+  "devDependencies": {
+    "css-loader": "^6.8.1",
+    "html-webpack-plugin": "^5.5.3",
+    "style-loader": "^3.3.3",
+    "webpack": "^5.88.1",
+    "webpack-cli": "^5.1.4"
+  }
+}
